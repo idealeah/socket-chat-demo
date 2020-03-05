@@ -1,6 +1,6 @@
-var socket = io.connect('http://localhost:8080'); //rename
-
-var displayMessage = ""; //string of messages
+let port = process.env.PORT || 8080;
+let socket = io();
+let displayMessage = ""; //string of messages
 
 socket.on('messages', function (data) {
     //alert(data.alertBox);
