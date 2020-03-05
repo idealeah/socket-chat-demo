@@ -1,4 +1,3 @@
-let port = process.env.PORT || 8080;
 let socket = io();
 let displayMessage = ""; //string of messages
 
