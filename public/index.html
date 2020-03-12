@@ -4,12 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Cat Enthusiasts Chatroom</title>
-
-  <style>
-    input {
-      display: inline;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -27,7 +22,7 @@
       <h4> Please choose your username.</h4>
       <br>
       Username:
-      <input type="text" name="Nickname" value="LonelyCatLady">
+      <input type="text" name="Nickname" value="LonelyDogLady">
       <br>
       <input type="submit" value="Submit">
     </form>
@@ -37,21 +32,11 @@
   <!-- Chatroom          -->
 
 
-  <div id="chatroom" style="
-			height: 500px;
-			display: none; 	
-			background-color: #D3D3D3;
-			margin: 100px;
-			position: relative;">
-    <div style="padding:10px; height: 400px; overflow-y: scroll" id=chatbox>You have entered the chatroom</div>
-    <div style=" width:100%; position:absolute; bottom:0;">
+  <div id="chatroom">
+    <div id=chatbox>You have entered the chatroom</div>
+    <div id=form-container>
       <form action="javascript:clientMessage();" id="inputMessage">
-        <input style="
-				margin: 10px;
-                bottom: 0; 
-                width: 90%; 
-                font-size: 12px;
-                padding:5px;" type="text" name="messageContent" value="Start typing...">
+        <input id=message-content type="text" name="messageContent" value="Start typing...">
         <input type="submit" value="Submit">
 
       </form>
