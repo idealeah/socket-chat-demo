@@ -1,9 +1,9 @@
-var express = require("express");
-var app = express();
-var server = require("http").createServer(app);
-var io = require("socket.io")(server);
-var port = process.env.PORT || 8080;
-var allClients = "";
+let express = require("express");
+let app = express();
+let server = require("http").createServer(app);
+let io = require("socket.io")(server);
+let port = process.env.PORT || 8080;
+let allClients = "";
 
 server.listen(port, function () {
   console.log("Server listening on " + port);
