@@ -33,7 +33,7 @@ function hideNameForm() {
 
 function showChatRoom() {
     document.getElementById("chatroom").style.display = "block";
-    var nickName = document.getElementsByName("Nickname")[0].value;
+    let nickName = document.getElementsByName("Nickname")[0].value;
     displayMessage = nickName + " has joined the chatroom" + "<br>";
     socket.emit('getOthersNames');
     display();
@@ -41,8 +41,8 @@ function showChatRoom() {
 }
 
 function clientMessage() {
-    var thisMessage = document.getElementsByName("messageContent")[0].value;
-    var username = document.getElementsByName("Nickname")[0].value;
+    let thisMessage = document.getElementsByName("messageContent")[0].value;
+    let username = document.getElementsByName("Nickname")[0].value;
 
     socket.emit('submission', thisMessage);
     document.getElementsByName("messageContent")[0].value = "";
